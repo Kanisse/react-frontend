@@ -6,7 +6,7 @@ function App() {
 
   useEffect(() => {
     // Fetch comments from the API
-    axios.get('http://api-container:8000/api/comments') // Remplacer par l'adresse de votre API
+    axios.get('http://api-app-app-1:8000') // Remplacer par l'adresse de votre API
       .then(response => {
         setComments(response.data);
       })
@@ -20,7 +20,9 @@ function App() {
       <h1>Commentaires</h1>
       <ul style={{ listStyleType: 'none', padding: 0 }}>
         {comments.map(comment => (
-          <li key={comment.id} style={{ margin: '10px 0', padding: '10px', backgroundColor: '#333', borderRadius: '5px' }}>
+          <li key={comment.id} 
+          style={{ margin: '10px 0', padding: '10px', backgroundColor: '#333', 
+          borderRadius: '5px' }}>
             {comment.comment}
           </li>
         ))}
